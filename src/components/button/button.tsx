@@ -1,6 +1,5 @@
 import React from 'react'
 import * as Styled from './button.styles'
-
 interface buttonProps {
   label: string
 }

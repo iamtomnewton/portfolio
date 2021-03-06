@@ -7,13 +7,15 @@ export const lightTheme: DefaultTheme = {
     main: 'white',
     secondary: 'black',
   },
-}
 
-export const darkTheme: DefaultTheme = {
-  borderRadius: '5px',
-
-  colors: {
-    main: 'black',
-    secondary: 'white',
+  type: {
+    h1: {
+      size: '32px',
+      color: 'purple',
+    },
+    h2: {
+      size: '24px',
+      color: 'blue',
+    },
   },
 }

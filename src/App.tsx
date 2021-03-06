@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import { lightTheme } from './themes'
 import { Button } from './components/button/button'
+import { Typography } from './components/typography/typography'
 
 const Wrapper = styled.main`
   background-color: ${(props) => props.theme.colors.main};
@@ -9,17 +10,11 @@ const Wrapper = styled.main`
   max-width: 900px;
 `
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: ${(props) => props.theme.colors.secondary};
-`
-
 export const App = () => {
   return (
     <ThemeProvider theme={lightTheme}>
       <Wrapper className='App'>
-        <Title className='App-header'>iamtomnewton</Title>
+        <Typography as='h2'>iamtomnewton</Typography>
         <Button label={'test'} />
       </Wrapper>
     </ThemeProvider>
