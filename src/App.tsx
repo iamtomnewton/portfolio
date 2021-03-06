@@ -20,7 +20,7 @@ export const App = () => {
     <ThemeProvider theme={lightTheme}>
       <Wrapper className='App'>
         <Title className='App-header'>iamtomnewton</Title>
-        <Button label={'test woooo'} />
+        <Button label={'test'} />
       </Wrapper>
     </ThemeProvider>
   )
