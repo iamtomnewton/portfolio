@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import styled, { ThemeProvider } from 'styled-components'
+import { lightTheme } from './themes'
+import { Button } from './components/button/button'
 
-function App() {
+const Wrapper = styled.main`
+  background-color: ${(props) => props.theme.colors.main};
+  margin: 0 auto;
+  max-width: 900px;
+`
+
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: ${(props) => props.theme.colors.secondary};
+`
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={lightTheme}>
+      <Wrapper className='App'>
+        <Title className='App-header'>iamtomnewton</Title>
+        <Button label={'test woooo'} />
+      </Wrapper>
+    </ThemeProvider>
+  )
 }
-
-export default App;
